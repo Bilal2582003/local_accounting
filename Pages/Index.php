@@ -46,7 +46,7 @@ include "../Model/connection.php";
             <th>Payment Mode</th>
             <th>Advance Mode</th>
             <th>Reason</th>
-            <th>Created At</th>
+            <th>Receipt At</th>
           </tr>
         </thead>
         <tbody id="tbody">

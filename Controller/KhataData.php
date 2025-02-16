@@ -42,7 +42,7 @@ if(isset($_POST['data'])){
             <td>'.$debit.'</td>
             <td>'.$advance.'</td>
             <td>'.$row['reason'].'</td>
-            <td>'.$row['created_at'].'</td>
+            <td>'.$row['receipt_date'].'</td>
             <td><a class="printBtn" href="../Controller/slip.php?id='.$row['id'].'&type=worker">Print</button></td>
             </tr>
             ';

@@ -34,9 +34,8 @@ if (isset($_POST["submit"]) || isset($_POST["update"]) || isset($_POST['closing'
     } else {
         if (isset($_POST["submit"]) || isset($_POST['closing'])) {
             if (isset($_POST['closing'])) {
-                date_default_timezone_set('Asia/Karachi');
-                $today_date = date("Y-m-d H:i:s");
-                $query1 = " UPDATE `khata` SET deleted_at = '$today_date', delete_reason = 'closing' where worker_id = '$worker' and deleted_at is null ";
+                $closing_date_set = date("Y-m-d H:i:s" , strtotime($receiptDate));
+                $query1 = " UPDATE `khata` SET deleted_at = '$closing_date_set', delete_reason = 'closing' where worker_id = '$worker' and deleted_at is null ";
                 $res1 = mysqli_query($con, $query1);
             }
             $query = "INSERT INTO `khata`(`worker_id`,`$debit_credit`, `reason`,`receipt_date`) VALUES ('$worker','$amount','$reason', '$receiptDate')";
