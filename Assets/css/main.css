@@ -1,0 +1,495 @@
+
+:root{
+  --white :#fff; 
+  --black :#212121; 
+}
+.dark-theme{
+  --white :#212121; 
+  --black :#fff; 
+  
+}
+body{
+  margin:0px;
+  color: var(--black)
+}
+    /* CSS for the table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: var(--white);
+      font-weight: bold;
+    }
+
+    /* CSS for the modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: var(--black);
+    }
+
+    .modal-content {
+      background-color: var(--white);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 60%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    /* CSS for the form inside the modal */
+    #addWorkerForm label, #addPartyForm label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #addWorkerForm input[type="text"], #addPartyForm input[type="text"], #addPartyForm select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .selectBox{
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    #addWorkerForm input[type="submit"], #addPartyForm input[type="submit"]{
+      background-color: #4CAF50;
+      color: var(--white);
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #addWorkerForm input[type="submit"]:hover, #addPartyForm input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    /* CSS for the Add New Worker button */
+    /* #addWorkerBtn, #addPartyBtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    } */
+
+    /* #addWorkerBtn:hover, #addPartyBtn:hover {
+      background-color: #45a049;
+    } */
+
+    #search_bar_section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    #search_bar {
+      width: 200px;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+    }
+
+    .green,
+    .red,
+    .blue {
+      /* color: white; */
+      text-transform: capitalize;
+      padding: 5px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .green {
+      color: green;
+      border: 1.5px solid darkGreen;
+    }
+
+    .red {
+      color: red;
+      border: 1.5px solid darkRed;
+    }
+
+    .blue {
+      color: blue;
+      border: 1.5px solid darkblue;
+    }
+
+    .navbar {
+margin-top:0px ;
+      background-color: var(--black);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      padding:0 10px
+    }
+
+    .navbar a {
+      float: left;
+      color: var(--white);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      margin:5px;
+      border-radius: 22px;
+      background: transparent;
+      color:var(--white);
+      transition: 0.5s ease-in-out;
+    }
+    #icon{
+      padding: 14px 16px;
+      text-decoration: none;
+      margin:5px;
+      border-radius: 22px;
+      cursor: pointer;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: var(--black);
+    }
+
+    .active {
+      border: 1.2px solid var(--white);
+      box-shadow:var(--white) 2px 0.2px 15px 0.01px;
+      animation: borderShadowAnimation 1s ease-in-out infinite;
+    }
+@keyframes borderShadowAnimation {
+  0% {
+    
+    box-shadow: var(--white) 2px 0.2px 15px 0.01px;
+  }
+  50% {
+    box-shadow: var(--white) 1.5px 1.5PX 22px 0.01px;
+  }
+  100% {
+    
+    box-shadow: var(--white) 2px 0.2px 15px 0.01px;
+  }
+}
+    .bigfont {
+      font-size: x-large;
+      margin: 10px
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .mTable {
+      margin: 10px;
+    }
+
+    .mTable thead {
+      background-color: lightgray;
+    }
+
+    .mTable thead tr td {
+      border: 1px solid var(--black)
+    }
+
+    .mTable tbody tr td {
+      font-size: large;
+      border: 1px solid var(--black)
+    }
+
+    #main_section {
+      max-width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px var(--black);
+    }
+    #logout :hover{
+      background-color: white !important;
+      color:red;
+      text-shadow: 2px 2px 5px red;
+    }
+    #logout a:hover{
+      border: 2px;
+      background-color: white !important;
+    }
+    
+
+
+    /* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+} */
+
+    #main_section {
+      max-width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px var(--black);
+    }
+
+    #search_bar_section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    #search_text {
+      font-weight: bold;
+    }
+
+    #search_bar {
+      width: 200px;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+    }
+
+    #buttonAdd {
+      text-align: right;
+    }
+
+    button {
+      /* padding: 8px 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer; */
+      padding:15px 40px;
+      border: none;
+      outline: none;
+      color:var(--white);
+      cursor: pointer;
+      position:relative;
+      z-index: 0;
+      border-radius: 12px;
+    }
+    button::after{
+content: "";
+z-index: -1;
+position: absolute;
+width: 100%;
+height: 100%;
+background-color:var(--black);
+left :0;
+top: 0;
+border-radius: 10px;
+    }
+    button::before{
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #fffb00, #48ff00,
+        #00ffd5, #002bff, #ff00c8, #ff0000
+        );
+        position: absolute;
+        top:-2px;
+        left:-2px;
+        background-size: 600%;
+        z-index: -1;
+width:calc(100% + 4px);
+height: calc(100% + 4px);
+filter:blur(8px);
+animation: glowing 20s linear infinite; 
+transition: opacity .3s ease-in-out;
+border-radius: 10px;
+opacity: 1;
+      }
+
+      @keyframes glowing{
+        0% {background-position: 0 0;}
+        50% {background-position: 400% 0;}
+        100% {background-position: 0 0;}
+      }
+
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: var(--white);
+    }
+
+    #tbody tr:hover {
+      background-color: var(--white);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--black);
+    }
+
+
+
+    .green,
+    .red,
+    .blue {
+      /* color: white; */
+      text-transform: capitalize;
+      padding: 5px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .green {
+      color: green;
+      border: 1.5px solid darkGreen;
+      background-color: white;
+    }
+
+    .red {
+      color: red;
+      border: 1.5px solid darkRed;
+      background-color: white;
+    }
+
+    .blue {
+      color: blue;
+      border: 1.5px solid darkblue;
+      background-color: white;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: var(--black);
+    }
+
+    .modal-content {
+      background-color: var(--white);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: var(--black);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 5px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group select,
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-group input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #4caf50;
+      color: var(--white);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .printBtn{
+      border:1px solid green; border-radius:8px;color:green;padding:10px;cursor:pointer
+    }
+    .printBtn:hover{
+      box-shadow: 1px 1.5px 6px  green;
+    }
+  
