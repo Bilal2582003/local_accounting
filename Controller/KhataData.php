@@ -3,12 +3,12 @@ if(isset($_POST['data'])){
     $output='';
     include "../Model/connection.php";
     if($_POST['data'] == 'all'){
-        $query="SELECT khata.*,workers.name as worker_name from khata join workers on khata.worker_id = workers.id where khata.deleted_at is null order by receipt_date desc";
+        $query="SELECT khata.*,workers.name as worker_name from khata join workers on khata.worker_id = workers.id where khata.deleted_at is null order by id desc";
       
     }
     else{
         $search=$_POST['data'];
-        $query="SELECT khata.*,workers.name as worker_name from khata join workers on khata.worker_id = workers.id where khata.credit like '%$search%' or khata.debit like '%$search%' or khata.reason like '%$search%' or workers.name like '%$search%' and khata.deleted_at is null  order by receipt_date desc";
+        $query="SELECT khata.*,workers.name as worker_name from khata join workers on khata.worker_id = workers.id where (khata.credit like '%$search%' or khata.debit like '%$search%' or khata.reason like '%$search%' or workers.name like '%$search%') and ( khata.deleted_at is null and khata.delete_reason is null)  order by khata.id desc";
     }
     $res=mysqli_query($con,$query);
     if(mysqli_num_rows($res) > 0){
