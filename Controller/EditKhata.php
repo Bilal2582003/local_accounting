@@ -89,6 +89,10 @@ if(isset($_POST['id'])){
       <label for="reason">Reason:</label>
       <input type="text" value="'.$row['reason'].'" id="editreason" name="reason" placeholder="Enter reason" required>
     </div>
+     <div class="form-group">
+      <label for="receipt_date">Receipt Date:</label>
+      <input type="text" value="'.$row['receipt_date'].'" id="editreceipt_date" name="receipt_date" required>
+    </div>
 
     <div class="form-group">
       <input type="submit" id="editsubmit" name="submit" value="Update">

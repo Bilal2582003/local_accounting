@@ -396,6 +396,7 @@ include "../Model/connection.php";
       var transactionType = $(".edittransactionType:checked").val();
       var advanceType = $(".editadvanceType:checked").val();
       var reason = $("#editreason").val();
+      var receipt_date = $("#editreceipt_date").val();
       var data;
       // console.log(advanceType)
       if (advanceType !== null) {
@@ -406,7 +407,8 @@ include "../Model/connection.php";
           'amount': amount,
           'transactionType': transactionType,
           'advanceType': advanceType,
-          'reason': reason
+          'reason': reason,
+          'receiptDate': receipt_date
         };
       } else {
         data = {
@@ -415,7 +417,8 @@ include "../Model/connection.php";
           'worker': worker,
           'amount': amount,
           'transactionType': transactionType,
-          'reason': reason
+          'reason': reason,
+          'receiptDate': receipt_date
         };
       }
 
